@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ara Korea International Film Festival</title>
-  <meta name="description" content="Ara Korea International Film Festival is an international film festival held in Korea." />
+  <title>Ara Korea International Film Festival (AKIFF)</title>
+  <meta name="description" content="Ara Korea International Film Festival (AKIFF) is an offline international film festival in Korea. Submissions via FilmFreeway." />
 
   <style>
     :root{
@@ -44,15 +44,19 @@
       font-size:12px;
       text-transform:uppercase;
       letter-spacing:0.6px;
+      gap: 16px;
     }
     .brand{ font-weight:700; }
     nav{
       display:flex;
       gap:12px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
       color:var(--muted);
       font-size:11.5px;
       letter-spacing:0.6px;
     }
+    nav a{ padding:4px 0; }
 
     h1{
       margin: 48px 0 10px;
@@ -66,19 +70,15 @@
       h1{ white-space: normal; }
     }
 
-    /* Short, breathing subtitle */
     .subtitle{
       margin: 0 0 22px;
       font-size: 13.5px;
       color: var(--muted);
       letter-spacing: 0.35px;
-      max-width: 100%;
       white-space: nowrap;
     }
     @media (max-width: 520px){
-      .subtitle{
-        white-space: normal;
-      }
+      .subtitle{ white-space: normal; }
     }
 
     .btn{
@@ -138,24 +138,20 @@
     <header>
       <div class="topbar">
         <div class="brand">AKIFF</div>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#format">Format</a>
-          <a href="#awards">Awards</a>
-          <a href="#submission">Submission</a>
-          <a href="#contact">Contact</a>
+        <nav aria-label="Primary">
+          <a href="./about.html">About</a>
+          <a href="./awards.html">Awards</a>
+          <a href="./submit.html">Submission</a>
+          <a href="./contact.html">Contact</a>
         </nav>
       </div>
     </header>
 
     <main>
       <h1>Ara Korea International Film Festival</h1>
+      <div class="subtitle">An international film festival held in Korea.</div>
 
-      <div class="subtitle">
-        An international film festival held in Korea.
-      </div>
-
-      <a class="btn primary" href="https://filmfreeway.com/arakorea" target="_blank">
+      <a class="btn primary" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">
         Submit via FilmFreeway
       </a>
 
@@ -165,43 +161,20 @@
         <span class="pill">English (official communication)</span>
       </div>
 
-      <section id="about">
-        <h2>About</h2>
+      <section>
+        <h2>Quick overview</h2>
         <p>
-          Ara Korea International Film Festival (AKIFF) presents new cinematic voices and supports
-          emerging filmmakers through in-person screenings and an international awards program.
+          AKIFF presents new cinematic voices through curated offline screenings and an international awards program.
+          For submissions, please use FilmFreeway.
         </p>
-      </section>
-
-      <section id="format">
-        <h2>Format</h2>
         <p>
-          The festival is held offline with curated screenings. Details will be updated once the venue and dates are confirmed.
+          <a href="./about.html">Read more about the festival →</a>
         </p>
-      </section>
-
-      <section id="awards">
-        <h2>Awards</h2>
-        <p>
-          Best Feature Film · Best Short Film · Best Documentary · Best Director · Best Actor / Actress
-        </p>
-      </section>
-
-      <section id="submission">
-        <h2>Submission</h2>
-        <p>
-          All film submissions are accepted exclusively via FilmFreeway.
-        </p>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: official@email.com</p>
       </section>
 
       <footer>
         <div>© <span id="y"></span> Ara Korea International Film Festival</div>
-        <div>Organized by Ara Korea</div>
+        <div><a href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">FilmFreeway</a></div>
       </footer>
     </main>
   </div>
