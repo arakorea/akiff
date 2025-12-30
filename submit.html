@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Submission — Ara Korea International Film Festival (AKIFF)</title>
-  <meta name="description" content="Submission guidelines for Ara Korea International Film Festival (AKIFF). All submissions are accepted via FilmFreeway." />
+  <title>Submission — Ara Korea Film Festival (AKFF)</title>
+  <meta name="description" content="Submission guidelines for Ara Korea Film Festival (AKFF). All submissions are accepted via FilmFreeway." />
 
   <style>
     :root{
@@ -47,6 +47,14 @@
       gap:16px;
     }
     .brand a{ font-weight:700; }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .akffMark{ font-weight:800; }
+    .ffLogo{ height:16px; width:auto; display:block; }
+    @media (max-width:420px){
+      .ffLogo{ height:14px; }
+      .brand{ gap:10px; }
+    }
+
     nav{
       display:flex;
       gap:14px;
@@ -123,7 +131,12 @@
     }
     li{ margin:6px 0; }
 
-    footer{
+    
+    .ffRow{ margin: 8px 0 14px; }
+    .ffLogoHero{ height: 20px; width:auto; display:block; opacity:0.95; }
+    @media (max-width:420px){ .ffLogoHero{ height:18px; } }
+
+footer{
       margin-top:72px;
       padding-top:22px;
       border-top:1px solid var(--line);
@@ -141,7 +154,12 @@
   <div class="wrap">
     <header>
       <div class="topbar">
-        <div class="brand"><a href="./index.html">AKIFF</a></div>
+        <div class="brand">
+          <a class="akffMark" href="./index.html" aria-label="AKFF Home">AKFF</a>
+          <a class="ffMark" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener" aria-label="FilmFreeway listing (opens in new tab)">
+            <img class="ffLogo" src="./filmfreeway-logo.png" alt="FilmFreeway" />
+          </a>
+        </div>
         <nav aria-label="Primary">
           <a href="./index.html">Home</a>
           <a href="./about.html">About</a>
@@ -156,9 +174,14 @@
       <section class="hero">
         <h1>Submission</h1>
         <p class="lead">
-          Ara Korea International Film Festival (AKIFF) accepts film submissions
+          Ara Korea Film Festival (AKFF) accepts film submissions
           exclusively through FilmFreeway.
         </p>
+        <div class="ffRow" aria-label="Submissions via FilmFreeway">
+          <a href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">
+            <img class="ffLogoHero" src="./filmfreeway-logo.png" alt="FilmFreeway" />
+          </a>
+        </div>
         <a class="btn primary" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">
           Submit via FilmFreeway
         </a>
@@ -167,7 +190,7 @@
       <section class="section">
         <h2>General Information</h2>
         <ul>
-          <li>AKIFF is an offline, in-person international film festival held in Korea.</li>
+          <li>AKFF is an offline, in-person international film festival held in Korea.</li>
           <li>All films are reviewed by the festival programming team.</li>
           <li>Selected films will be screened at the official festival venue.</li>
         </ul>
@@ -192,7 +215,7 @@
       </section>
 
       <footer>
-        <div>© <span id="y"></span> Ara Korea International Film Festival</div>
+        <div>© <span id="y"></span> Ara Korea Film Festival</div>
         <div><a href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">FilmFreeway</a></div>
       </footer>
     </main>
