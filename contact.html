@@ -28,7 +28,7 @@
  a:hover{ text-decoration:underline; }.wrap{ max-width:var(--max); margin:0 auto; padding:20px 20px 64px; }
 
  header{
- position: sticky;
+ position:relative;
  top: 0;
  background: rgba(255,255,255,0.96);
  border-bottom:1px solid var(--line);
@@ -52,11 +52,11 @@
  flex-wrap:wrap;
  justify-content:flex-end;
  }
- nav a{ white-space:nowrap; }
+ nav a{ white-space:nowrap; border-bottom:1px solid transparent; padding-bottom:2px; cursor:pointer; }
  nav a[aria-current="page"]{
  color:var(--text);
- text-decoration:underline;
- text-underline-offset:3px;
+ text-decoration:none;
+ border-bottom-color: var(--text);
  }
  @media (max-width:420px){.topbar{ align-items:flex-start; gap:10px; }
  nav{
@@ -127,23 +127,71 @@
  gap:12px 18px;
  flex-wrap:wrap;
  }
- </style>
+ 
+
+nav a:hover{ color:var(--text); border-bottom-color: rgba(17,17,17,0.75); }
+
+/* CONTACT FORM */
+.formWrap{
+  margin-top: 18px;
+}
+.formGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+.field{ display:flex; flex-direction:column; gap:8px; }
+.field.full{ grid-column:1 / -1; }
+label{
+  font-size:11.5px;
+  text-transform:uppercase;
+  letter-spacing:1.1px;
+  color:var(--muted);
+}
+input, textarea{
+  padding:12px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--text);
+  font:inherit;
+}
+textarea{ min-height:160px; resize:vertical; }
+.actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+.helper{
+  font-size:12px;
+  color:var(--muted);
+}
+@media (max-width:780px){
+  .formGrid{ grid-template-columns:1fr; }
+}
+
+</style>
 </head>
 
 <body>
  <div class="wrap">
  <header>
- <div class="topbar">
- <div class="brand"><a href="./index.html">AKFF</a></div>
- <nav aria-label="Primary">
- <a href="./index.html">Home</a>
- <a href="./about.html">About</a>
- <a href="./awards.html">Awards</a>
- <a href="./submit.html">Submission</a>
- <a href="./contact.html" aria-current="page">Contact</a>
- </nav>
- </div>
- </header>
+<div class="topbar">
+<div class="brand"><a href="./index.html">AKFF</a></div>
+<nav aria-label="Primary">
+<a href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="./awards.html">Awards</a>
+<a href="./submit.html">Submission</a>
+<a href="./contact.html" aria-current="page">Contact</a>
+
+
+</nav>
+</div>
+</header>
 
  <main>
  <section class="hero">
@@ -154,17 +202,55 @@
  </p>
  </section>
 
- <section class="section">
- <h2>Official contact</h2>
- <div class="box">
- <ul class="clean">
- <li><strong>Email:</strong> <a href="mailto:info@akenm.com">info@akenm.com</a></li>
- <li><strong>Festival:</strong> Ara Korea Film Festival (AKFF)</li>
- <li><strong>Format:</strong> Offline / in-person</li>
- <li><strong>Location:</strong> Korea (Venue TBA)</li>
- </ul>
- </div>
- </section>
+ 
+<section class="section">
+  <h2>Official contact</h2>
+  <div class="box">
+    <p class="lead" style="font-size:14.5px; margin:0 0 14px;">
+      Please use the form<br>
+below for official inquiries to Ara Korea Film Festival (AKFF).
+    </p>
+
+    <form class="formWrap" method="POST" action="https://formspree.io/f/maqyznbe">
+      <input type="hidden" name="_subject" value="[AKFF] New inquiry">
+      <input type="hidden" name="form_type" value="AKFF_CONTACT">
+      <input type="text" name="_gotcha" style="display:none">
+
+      <div class="formGrid">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone">
+        </div>
+
+        <div class="field">
+          <label for="topic">Topic (optional)</label>
+          <input id="topic" name="topic" placeholder="Program / Submission / Partnership / Press">
+        </div>
+
+        <div class="field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+      </div>
+
+      <div class="actions">
+        <span class="helper">We will respond as soon as possible.</span>
+        <button class="btn primary" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+</section>
+
 
  <section class="section">
  <h2>Submission</h2>
