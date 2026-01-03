@@ -183,7 +183,35 @@
  gap:12px 18px;
  flex-wrap:wrap;
  }
- </style>
+ 
+/* ORGANIZER LINK */
+.orgCard{
+ display:inline-flex;
+ align-items:center;
+ gap:10px;
+ padding:8px 12px;
+ border:1px solid var(--line);
+ border-radius:12px;
+ background:#fff;
+ color:var(--text);
+ font-weight:600;
+ line-height:1;
+}
+.orgCard span{
+ font-weight:600;
+ color:var(--muted);
+ font-size:12px;
+}
+.orgCard img{
+ height:18px;
+ width:auto;
+ display:block;
+}
+.orgCard:hover{
+ border-color: rgba(17,17,17,0.35);
+}
+
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -222,7 +250,7 @@
 </section>
 <footer>
 <div>© <span id="y"></span> Ara Korea Film Festival</div>
-<div>Organized and operated by <a href="https://arakorea.org" rel="noopener" target="_blank">ARA KOREA</a></div>
+<div><a class="orgCard" href="https://arakorea.org" target="_blank" rel="noopener" aria-label="Organized and operated by ARA KOREA (opens in a new tab)"><span>Organized by</span><img src="./ara korea.png" alt="ARA KOREA"></a></div>
 </footer>
 </main>
 </div>
