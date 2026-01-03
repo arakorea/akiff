@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
- <meta charset="utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
- <title>Ara Korea Film Festival (AKFF)</title>
- <meta name="description" content="Ara Korea Film Festival (AKFF) — an offline festival in Korea celebrating diverse cinema." />
-
- <style>:root{
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Ara Korea Film Festival (AKFF)</title>
+<meta content="Ara Korea Film Festival (AKFF) — an international film festival recognizing overall excellence across all genres." name="description"/>
+<style>
+ :root{
  --bg:#ffffff;
  --text:#111111;
  --muted:#6a6a6a;
@@ -25,16 +26,18 @@
  font-size:15px;
  }
  a{ color:inherit; text-decoration:none; }
- a:hover{ text-decoration:underline; }.wrap{ max-width:var(--max); margin:0 auto; padding:20px 20px 64px; }
+ a:hover{ text-decoration:none; }
+
+ .wrap{ max-width:var(--max); margin:0 auto; padding:20px 20px 64px; }
 
  header{
- position: sticky;
- top: 0;
- background: rgba(255,255,255,0.92);
+ position:relative;
+ background: #ffffff;
  border-bottom:1px solid var(--line);
  z-index: 10;
- backdrop-filter: blur(10px);
- }.topbar{
+ }
+
+ .topbar{
  display:flex;
  justify-content:space-between;
  align-items:center;
@@ -43,8 +46,11 @@
  text-transform:uppercase;
  letter-spacing:0.7px;
  gap:16px;
- }.brand a{ font-weight:700; }
+ }
+ .brand a{ font-weight:700; }
  nav{
+ white-space:nowrap;
+
  display:flex;
  gap:14px;
  color:var(--muted);
@@ -56,116 +62,115 @@
  nav a{ white-space:nowrap; }
  nav a[aria-current="page"]{
  color:var(--text);
- text-decoration:underline;
- text-underline-offset:3px;
- }
- @media (max-width:420px){.topbar{ align-items:flex-start; gap:10px; }
- nav{
- flex-wrap:nowrap;
- overflow-x:auto;
- -webkit-overflow-scrolling:touch;
- justify-content:flex-start;
- gap:12px;
- font-size:11px;
- }
- nav::-webkit-scrollbar{ display:none; }
+ text-decoration:none;
+ border-bottom:1px solid var(--text);
+ padding-bottom:2px;
  }
 
- /* HERO */.hero{
+
+ /* HERO */
+ .hero{
  margin-top:18px;
  border:1px solid var(--line);
  border-radius:18px;
  overflow:hidden;
  background:#0b1220;
  position:relative;
- }.heroMedia{
+ }
+ .heroMedia{
  aspect-ratio: 16 / 9;
  width:100%;
  position:relative;
  background:#0b1220;
- }.heroMedia img{
+ }
+ .heroMedia > img{
  position:absolute;
  inset:0;
  width:100%;
  height:100%;
  object-fit:cover;
  display:block;
- transform: scale(1.02);
- }.heroMedia:after{
+ }
+ .heroMedia:after{
  content:"";
  position:absolute;
  inset:0;
  background:
- radial-gradient(1200px 600px at 25% 80%, rgba(0,0,0,0.05), rgba(0,0,0,0.55)),
- linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.18));
+ linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.25));
  pointer-events:none;
- }.heroInner{
+ }
+ .heroInner{
  position:absolute;
  inset:auto 0 0 0;
  padding:22px 20px 18px;
  color:#fff;
  z-index:2;
- }.kicker{
+ }
+ .kicker{
  font-size:11px;
  text-transform:uppercase;
  letter-spacing:1px;
- opacity:.92;
+ opacity:.9;
  margin:0 0 6px;
  }
  h1{
  margin:0 0 10px;
- font-size:clamp(26px,4vw,46px);
+ font-size:clamp(28px,4vw,46px);
  line-height:1.08;
- letter-spacing:-0.4px;
  font-weight:800;
- }.lead{
- margin:0 0 14px;
- max-width:780px;
- color:rgba(255,255,255,0.86);
+ }
+ .lead{
+ margin:0 0 18px;
+ max-width:760px;
+ color:rgba(255,255,255,0.88);
  font-size:14.5px;
- }.ctaRow{
+ }
+
+ .ctaRow{
  display:flex;
- gap:10px;
+ gap:14px;
  flex-wrap:wrap;
  align-items:center;
- }.btn{
- display:inline-block;
- padding:11px 14px;
- border:1px solid rgba(255,255,255,0.85);
+ }
+.ctaRow .btn{ min-width:160px; }
+
+
+ .btn{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ min-height:44px;
+ padding:0 16px;
+ border:1px solid rgba(255,255,255,0.9);
  border-radius:10px;
  font-weight:700;
  font-size:13px;
  color:#fff;
  backdrop-filter: blur(6px);
  background: rgba(255,255,255,0.08);
- }.btn.primary{
+ }
+
+ .btn.primary{
  background:#fff;
  color:#111;
  border-color:#fff;
- }.section{
- margin-top:46px;
- border-top:1px solid var(--line);
- padding-top:24px;
- max-width:920px;
  }
- h2{
- margin:0 0 10px;
- font-size:11.5px;
- text-transform:uppercase;
- letter-spacing:1.1px;
- color:var(--muted);
- }.grid{
- display:grid;
- grid-template-columns: 1fr 1fr;
- gap:16px;
- }
- @media (max-width:780px){.grid{ grid-template-columns: 1fr; }
- }.card{
- border:1px solid var(--line);
- border-radius:14px;
- padding:16px;
+
+ .btn.logo{
  background:#fff;
- }.card p{ margin:0; color:var(--muted); font-size:14px; }.card strong{ color:var(--text); }
+ color:#111;
+ border-color:#fff;
+ padding:0 16px;
+ }
+
+
+ .btn.logo img{
+ height:40px;
+ width:auto;
+ display:block;
+ image-rendering: -webkit-optimize-contrast;
+}
+
 
  footer{
  margin-top:72px;
@@ -180,77 +185,48 @@
  }
  </style>
 </head>
-
 <body>
- <div class="wrap">
- <header>
- <div class="topbar">
- <div class="brand"><a href="./index.html">AKFF</a></div>
- <nav aria-label="Primary">
- <a href="./index.html" aria-current="page">Home</a>
- <a href="./about.html">About</a>
- <a href="./awards.html">Awards</a>
- <a href="./submit.html">Submission</a>
- <a href="./contact.html">Contact</a>
- </nav>
- </div>
- </header>
+<div class="wrap">
+<header>
+<div class="topbar">
+<div class="brand"><a href="./index.html">AKFF</a></div>
+<nav aria-label="Primary">
+<a aria-current="page" href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="./awards.html">Awards</a>
+<a href="./submit.html">Submission</a>
+<a href="./contact.html">Contact</a>
 
- <main>
- <!-- Upload the hero image to your repo with filename: hero-akiff.png (same folder as index.html) -->
- <section class="hero" aria-label="Hero">
- <div class="heroMedia">
- <img src="./hero-akff.png" alt="AKFF key visual" />
- <div class="heroInner">
- <p class="kicker">Ara Korea Film Festival</p>
- <h1>AKFF</h1>
- <p class="lead">
- An offline film festival based in Korea, celebrating diverse cinematic voices.
+
+</nav>
+</div>
+</header>
+<main>
+<section aria-label="Hero" class="hero">
+<div class="heroMedia">
+<img alt="AKFF key visual" src="./hero-akff.png"/>
+<div class="heroInner">
+<p class="kicker">Ara Korea Film Festival</p>
+<h1>AKFF</h1>
+<p class="lead">
+ Recognizing overall excellence across all genres and formats.
  </p>
- <div class="ctaRow">
- <a class="btn primary" href="./submit.html">Call for Entries</a>
- <a class="btn" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">FilmFreeway</a>
- </div>
- </div>
- </div>
- </section>
-
- <section class="section">
- <h2>At a glance</h2>
- <div class="grid">
- <div class="card">
- <p><strong>Format:</strong> Offline / in-person</p>
- <p><strong>Location:</strong> Korea (Venue TBA)</p>
- </div>
- <div class="card">
- <p><strong>Submissions:</strong> Accepted via FilmFreeway only</p>
- <p><strong>Focus:</strong> cinema & diverse stories</p>
- </div>
- </div>
- </section>
-
- <section class="section">
- <h2>Start here</h2>
- <div class="grid">
- <div class="card">
- <p><strong>About AKFF</strong> — our mission, values, and what we celebrate.</p>
- <p style="margin-top:10px;"><a class="btn" href="./about.html">Read About</a></p>
- </div>
- <div class="card">
- <p><strong>Awards</strong> — highlights and recognition from prior editions.</p>
- <p style="margin-top:10px;"><a class="btn" href="./awards.html">View Awards</a></p>
- </div>
- </div>
- </section>
-
- <footer>
- <div>© <span id="y"></span> Ara Korea Film Festival</div>
- <div><a href="mailto:info@akenm.com">info@akenm.com</a></div>
- </footer>
- </main>
- </div>
-
- <script>
+<div class="ctaRow">
+<a class="btn primary" href="./submit.html">Call for Entries</a>
+<a aria-label="Submit via FilmFreeway" class="btn logo" href="https://filmfreeway.com/arakorea" rel="noopener" target="_blank">
+<img alt="FilmFreeway" src="./filmfreeway-logo-hi.png"/>
+</a>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div>© <span id="y"></span> Ara Korea Film Festival</div>
+<div>Organized and operated by <a href="https://arakorea.org" rel="noopener" target="_blank">ARA KOREA</a></div>
+</footer>
+</main>
+</div>
+<script>
  document.getElementById('y').textContent = new Date().getFullYear();
  </script>
 </body>
