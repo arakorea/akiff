@@ -55,12 +55,12 @@
  flex-wrap:wrap;
  justify-content:flex-end;
  }
- nav a{ white-space:nowrap; }
+ nav a{ white-space:nowrap; border-bottom:1px solid transparent; padding-bottom:2px; cursor:pointer; }
 
  nav a[aria-current="page"]{
- color: var(--text);
- text-decoration: underline;
- text-underline-offset: 3px;
+ color:var(--text);
+ text-decoration:none;
+ border-bottom-color: var(--text);
  }
 
  /* Small screens: keep nav on one line via horizontal scroll (no wrapping) */
@@ -172,7 +172,10 @@
  gap:12px 18px;
  flex-wrap:wrap;
  }
- </style>
+ 
+
+nav a:hover{ color:var(--text); border-bottom-color: rgba(17,17,17,0.75); }
+</style>
 
 </head>
 <body>
@@ -182,8 +185,8 @@
 <div class="topbar">
 <div class="brand"><a href="./index.html">AKFF</a></div>
 <nav aria-label="Primary">
-<a aria-current="page" href="./index.html">Home</a>
-<a href="./about.html">About</a>
+<a href="./index.html">Home</a>
+<a href="./about.html" aria-current="page">About</a>
 <a href="./awards.html">Awards</a>
 <a href="./submit.html">Submission</a>
 <a href="./contact.html">Contact</a>
