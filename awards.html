@@ -1,289 +1,91 @@
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
- <title>Awards — Ara Korea Film Festival (AKFF)</title>
- <meta name="description" content="AKFF Awards — categories and past awards archive for Ara Korea Film Festival." />
- 
- <style>header{
- position:relative;
- background: #ffffff;
- border-bottom:1px solid var(--line);
- z-index: 10;
- }
-
-.topbar{
- display:flex;
- justify-content:space-between;
- align-items:center;
- padding:14px 0;
- font-size:12px;
- text-transform:uppercase;
- letter-spacing:0.7px;
- gap:16px;
- }
-
-.brand a{ font-weight:700; }
-
-nav{
- white-space:nowrap;
-
- display:flex;
- gap:14px;
- color:var(--muted);
- font-size:11.5px;
- letter-spacing:0.7px;
- flex-wrap:wrap;
- justify-content:flex-end;
- }
-
-nav a[aria-current="page"]{
- color:var(--text);
- text-decoration:none;
- border-bottom:1px solid var(--text);
- padding-bottom:2px;
- }
-
-:root{
- --bg:#ffffff;
- --text:#111111;
- --muted:#6a6a6a;
- --line:#e6e6e6;
- --max: 1000px;
- }
- *{ box-sizing:border-box; }
- body{
- margin:0;
- background:var(--bg);
- color:var(--text);
- font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
- Roboto, Helvetica, Arial;
- line-height:1.7;
- letter-spacing:0.15px;
- font-size:15px;
- }
- a{ color:inherit; text-decoration:none; }
- a:hover{ text-decoration:underline; }.wrap{ max-width:var(--max); margin:0 auto; padding:20px 20px 64px; }
-
- nav a{ white-space:nowrap; }
-
- 
-
- 
-
- /* Small screens: keep nav on one line via horizontal scroll (no wrapping) */
- @media (max-width: 420px){.topbar{ align-items:flex-start; gap:10px; }
- nav{
- flex-wrap: nowrap;
- overflow-x: auto;
- -webkit-overflow-scrolling: touch;
- max-width: 100%;
- padding-bottom: 4px;
- justify-content:flex-start;
- gap:12px;
- font-size:11px;
- }
- nav::-webkit-scrollbar{ display:none; }
- }
-/* Page */.hero{
- margin-top:48px;
- max-width:820px;
- }
- h1{
- margin: 0 0 14px;
- font-size: clamp(30px, 4.2vw, 54px);
- line-height:1.08;
- letter-spacing:-0.4px;
- font-weight:700;
- }.lead{
- margin: 0 0 26px;
- font-size: 16px;
- color: var(--muted);
- max-width: 720px;
- }.cta{
- display:flex;
- gap:12px;
- flex-wrap:wrap;
- }.btn{
- display:inline-block;
- padding: 12px 16px;
- border:1px solid var(--text);
- border-radius: 10px;
- font-weight:600;
- font-size: 13px;
- }.btn.primary{ background:var(--text); color:var(--bg); }.impact{
- margin-top:42px;
- display:grid;
- grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
- gap:22px;
- }.impact.card{
- padding:18px 18px 20px;
- border:1px solid var(--line);
- border-radius:14px;
- background:#fff;
- }.impact strong{
- display:block;
- font-size:13px;
- margin-bottom:6px;
- letter-spacing:0.6px;
- text-transform:uppercase;
- }.impact span{
- font-size:14px;
- color:var(--muted);
- }.section{
- margin-top: 46px;
- border-top: 1px solid var(--line);
- padding-top: 24px;
- max-width: 820px;
- }.kicker{
- margin: 0 0 10px;
- font-size: 11.5px;
- text-transform:uppercase;
- letter-spacing:1.1px;
- color:var(--muted);
- }
- h2{
- margin: 0 0 10px;
- font-size: 11.5px;
- text-transform:uppercase;
- letter-spacing:1.1px;
- color:var(--muted);
- }.two-col{
- display:grid;
- grid-template-columns: 1.2fr 1fr;
- gap: 18px;
- align-items:start;
- }
- @media (max-width: 820px){.two-col{ grid-template-columns: 1fr; }
- }.box{
- border:1px solid var(--line);
- border-radius:14px;
- padding:16px;
- background:#fff;
- }
- ul.clean{
- margin: 0;
- padding-left: 18px;
- color: var(--muted);
- }
- ul.clean li{ margin: 6px 0; }
-
- footer{
- margin-top: 72px;
- padding-top: 22px;
- border-top: 1px solid var(--line);
- color:var(--muted);
- font-size: 12px;
- display:flex;
- justify-content:space-between;
- gap:12px 18px;
- flex-wrap:wrap;
- }</style>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awards · Ara Korea Film Festival</title>
+  <meta name="description" content="The four AKFF awards recognize overall artistic and cinematic excellence across every genre, length, and format.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="Awards · Ara Korea Film Festival">
+  <meta property="og:description" content="Four distinctions. No genre walls.">
+  <meta property="og:image" content="https://i.ytimg.com/vi/4b6K4aricJc/maxresdefault.jpg">
+  <link rel="canonical" href="https://www.arakoreafilmfestival.com/awards.html">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./site.js" defer></script>
 </head>
-<body>
- <div class="wrap">
- 
-<header>
-<div class="topbar">
-<div class="brand"><a href="./index.html">AKFF</a></div>
-<nav aria-label="Primary">
-<a href="./index.html">Home</a>
-<a href="./about.html">About</a>
-<a href="./awards.html" aria-current="page">Awards</a>
-<a href="./submit.html">Submission</a>
-<a href="./contact.html">Contact</a>
+<body data-page="awards">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header id="siteHeader"></header>
 
+  <main id="main" class="page-shell">
+    <section class="page-hero">
+      <div class="content-frame page-hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="awards.kicker">02 · Awards</p>
+          <h1 class="display-title" data-i18n-html="awards.title">Excellence<br><em>without borders.</em></h1>
+        </div>
+        <div class="page-hero-copy">
+          <p class="body-large" data-i18n="awards.lead">Four awards recognize artistic achievement across every genre, length, and format. All submitted films are considered together.</p>
+        </div>
+      </div>
+    </section>
 
-</nav>
-</div>
-</header>
+    <section class="content-section">
+      <div class="content-frame">
+        <div class="split-intro reveal" style="margin-bottom:80px">
+          <div>
+            <p class="eyebrow" data-i18n="awards.introKicker">The four distinctions</p>
+            <h2 class="section-title" data-i18n-html="awards.introTitle">One field.<br>Four honors.</h2>
+          </div>
+          <p class="body-large" data-i18n="awards.introCopy">The AKFF jury is composed of active professional filmmakers. Every decision is grounded in artistic quality, originality, and cinematic execution.</p>
+        </div>
 
- <main>
-<section class="hero">
-  <div class="kicker">Ara Korea Film Festival</div>
-  <h1>Awards</h1>
-  <p class="lead">
-   The AKFF Awards recognize bold visions, distinct voices, and cinematic integrity across diverse forms of filmmaking.
-  </p>
+        <div class="award-list reveal">
+          <article class="award-row" id="best-film">
+            <span class="award-index">01 / 04</span>
+            <h3 class="award-name" data-i18n="awards.a1">Best Film</h3>
+            <p class="award-description" data-i18n="awards.a1d">Presented to the work demonstrating the highest level of overall artistic and cinematic achievement through storytelling, direction, vision, and impact.</p>
+          </article>
+          <article class="award-row" id="best-director">
+            <span class="award-index">02 / 04</span>
+            <h3 class="award-name" data-i18n="awards.a2">Best Director</h3>
+            <p class="award-description" data-i18n="awards.a2d">Presented to a director whose work reveals exceptional artistic vision, originality, and command of cinematic language.</p>
+          </article>
+          <article class="award-row" id="best-performance">
+            <span class="award-index">03 / 04</span>
+            <h3 class="award-name" data-i18n="awards.a3">Best Performance</h3>
+            <p class="award-description" data-i18n="awards.a3d">Presented for a performance of exceptional depth, authenticity, and emotional power, by an individual or ensemble.</p>
+          </article>
+          <article class="award-row" id="jury-prize">
+            <span class="award-index">04 / 04</span>
+            <h3 class="award-name" data-i18n="awards.a4">Jury Special Prize</h3>
+            <p class="award-description" data-i18n="awards.a4d">Presented to a film distinguished by a singular voice, innovative approach, or perspective recognized by the jury.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <div class="cta">
-   <a class="btn" href="./about.html">About AKFF</a>
-   <a class="btn primary" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">Submit via FilmFreeway</a>
-  </div>
- </section>
+    <section class="content-section">
+      <div class="content-frame editorial-grid reveal">
+        <div>
+          <p class="eyebrow" data-i18n="awards.noteKicker">Jury & process</p>
+          <h2 class="section-title small" data-i18n-html="awards.noteTitle">Independent judgment.<br>Clear standards.</h2>
+        </div>
+        <p class="body-large" data-i18n="awards.noteCopy">Jury decisions are final. When no work meets the festival's standard for a distinction, that award may remain unpresented. Official selections receive AKFF laurels, and winners are announced during the festival period.</p>
+      </div>
+    </section>
 
- <section class="section">
-  <h2>Awards &amp; jury</h2>
-  <div class="box">
-   <p class="lead" style="font-size:14.5px; margin:0 0 12px;">
-    Films selected for competition will be evaluated by an international jury appointed by Ara Korea Film Festival.
-    Winners will be officially announced during the festival period.
-   </p>
-   <ul class="clean">
-    <li>Awards and Certificates for the Winner in Each Category</li>
-    <li>Official Selection Laurels for Selected Films</li>
-    <li>Selected filmmakers will be notified by email in advance of the public announcement.</li>
-   </ul>
-   <p class="lead" style="font-size:14.5px; margin:12px 0 0;">
-    Please note: If, at the discretion of the jury, no film meets the festival’s artistic standards in a category, awards may not be presented for that category.
-   </p>
-  </div>
- </section>
+    <section class="cta-banner">
+      <div class="content-frame cta-banner-inner reveal">
+        <div>
+          <p class="eyebrow" data-i18n="awards.ctaKicker">Present your work</p>
+          <h2 class="section-title" data-i18n-html="awards.ctaTitle">Four awards.<br>One uncompromised vision.</h2>
+        </div>
+        <a class="button" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener"><span data-i18n="common.submit">Submit on FilmFreeway</span></a>
+      </div>
+    </section>
+  </main>
 
- <section class="section">
-  <h2>Categories</h2>
-  <div class="impact" style="margin-top:18px;">
-   <div class="card"><strong>Best Film</strong><span>Overall excellence</span></div>
-   <div class="card"><strong>Best Director</strong><span>Artistic vision &amp; craft</span></div>
-   <div class="card"><strong>Best Performance</strong><span>Acting achievement</span></div>
-   <div class="card"><strong>Jury Special Prize</strong><span>Distinctive work</span></div>
-  </div>
-  <p class="lead" style="font-size:14.5px; margin-top:18px;">
-   Categories may be adjusted by year. Final categories will be published with the official call for entries.
-  </p>
- </section>
-
- <section class="section">
-  <h2>Rules &amp; Terms</h2>
-  <div class="box">
-   <p class="lead" style="font-size:14.5px; margin:0 0 12px;">
-    AKFF is committed to providing a fair, transparent, and professional environment for filmmakers worldwide.
-    By submitting a film to AKFF, applicants agree to the festival’s Rules &amp; Terms.
-   </p>
-
-   <ul class="clean">
-    <li><strong>Eligibility:</strong> Filmmakers aged 10+ (worldwide)</li>
-    <li><strong>Submissions:</strong> FilmFreeway only</li>
-    <li><strong>Subtitles:</strong> Non-Korean films must include Korean subtitles</li>
-    <li><strong>Governing language:</strong> English prevails in case of discrepancy</li>
-   </ul>
-
-   <p class="lead" style="font-size:14.5px; margin:14px 0 0;">
-    <a class="btn" href="./AKFF_Rules_and_Terms.docx">Download Rules &amp; Terms</a>
-   </p>
-</div>
- </section>
-
- <section class="section">
-  <h2>Past awards</h2>
-  <div class="box">
-   <p class="lead" style="font-size:14.5px; margin:0 0 10px;">
-    Winner information will be archived here by year.
-   </p>
-   <ul class="clean">
-    <li><strong>AKFF 2024</strong> — Inaugural edition (archive coming soon)</li>
-   </ul>
-  </div>
- </section>
-
- <footer>
-  <div>© <span id="y"></span> Ara Korea Film Festival</div>
-  <div><a href="./index.html">Home</a> · <a href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">FilmFreeway</a></div>
- </footer>
-</main>
- </div>
- <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <footer id="siteFooter"></footer>
 </body>
 </html>

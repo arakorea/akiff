@@ -1,257 +1,103 @@
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
- <title>Submission — Ara Korea Film Festival (AKFF)</title>
- <meta name="description" content="Submission guidelines for Ara Korea Film Festival (AKFF). All submissions are accepted via FilmFreeway." />
- <style>
-header{
- position:relative;
- background: #ffffff;
- border-bottom:1px solid var(--line);
- z-index: 10;
- }
-
-.topbar{
- display:flex;
- justify-content:space-between;
- align-items:center;
- padding:14px 0;
- font-size:12px;
- text-transform:uppercase;
- letter-spacing:0.7px;
- gap:16px;
- }
-
-.brand a{ font-weight:700; }
-
-nav{
- white-space:nowrap;
-
- display:flex;
- gap:14px;
- color:var(--muted);
- font-size:11.5px;
- letter-spacing:0.7px;
- flex-wrap:wrap;
- justify-content:flex-end;
- }
-
-nav a[aria-current="page"]{
- color:var(--text);
- text-decoration:none;
- border-bottom:1px solid var(--text);
- padding-bottom:2px;
- }
-
-:root{
- --bg:#ffffff;
- --text:#111111;
- --muted:#6a6a6a;
- --line:#e6e6e6;
- --max: 1000px;
- }
- *{ box-sizing:border-box; }
- body{
- margin:0;
- background:var(--bg);
- color:var(--text);
- font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
- Roboto, Helvetica, Arial;
- line-height:1.7;
- letter-spacing:0.15px;
- font-size:15px;
- }
- a{ color:inherit; text-decoration:none; }
- a:hover{ text-decoration:underline; }.wrap{ max-width:var(--max); margin:0 auto; padding:20px 20px 64px; }
-
- nav a{ white-space:nowrap; }
-
- 
-
- 
-
- /* Small screens: keep nav on one line via horizontal scroll (no wrapping) */
- @media (max-width: 420px){.topbar{ align-items:flex-start; gap:10px; }
- nav{
- flex-wrap: nowrap;
- overflow-x: auto;
- -webkit-overflow-scrolling: touch;
- max-width: 100%;
- padding-bottom: 4px;
- justify-content:flex-start;
- gap:12px;
- font-size:11px;
- }
- nav::-webkit-scrollbar{ display:none; }
- }
-/* Page */.hero{
- margin-top:48px;
- max-width:820px;
- }
- h1{
- margin: 0 0 14px;
- font-size: clamp(30px, 4.2vw, 54px);
- line-height:1.08;
- letter-spacing:-0.4px;
- font-weight:700;
- }.lead{
- margin: 0 0 26px;
- font-size: 16px;
- color: var(--muted);
- max-width: 720px;
- }.cta{
- display:flex;
- gap:12px;
- flex-wrap:wrap;
- }.btn{
- display:inline-block;
- padding: 12px 16px;
- border:1px solid var(--text);
- border-radius: 10px;
- font-weight:600;
- font-size: 13px;
- }.btn.primary{ background:var(--text); color:var(--bg); }.impact{
- margin-top:42px;
- display:grid;
- grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
- gap:22px;
- }.impact.card{
- padding:18px 18px 20px;
- border:1px solid var(--line);
- border-radius:14px;
- background:#fff;
- }.impact strong{
- display:block;
- font-size:13px;
- margin-bottom:6px;
- letter-spacing:0.6px;
- text-transform:uppercase;
- }.impact span{
- font-size:14px;
- color:var(--muted);
- }.section{
- margin-top: 46px;
- border-top: 1px solid var(--line);
- padding-top: 24px;
- max-width: 820px;
- }.kicker{
- margin: 0 0 10px;
- font-size: 11.5px;
- text-transform:uppercase;
- letter-spacing:1.1px;
- color:var(--muted);
- }
- h2{
- margin: 0 0 10px;
- font-size: 11.5px;
- text-transform:uppercase;
- letter-spacing:1.1px;
- color:var(--muted);
- }.two-col{
- display:grid;
- grid-template-columns: 1.2fr 1fr;
- gap: 18px;
- align-items:start;
- }
- @media (max-width: 820px){.two-col{ grid-template-columns: 1fr; }
- }.box{
- border:1px solid var(--line);
- border-radius:14px;
- padding:16px;
- background:#fff;
- }
- ul.clean{
- margin: 0;
- padding-left: 18px;
- color: var(--muted);
- }
- ul.clean li{ margin: 6px 0; }
-
- footer{
- margin-top: 72px;
- padding-top: 22px;
- border-top: 1px solid var(--line);
- color:var(--muted);
- font-size: 12px;
- display:flex;
- justify-content:space-between;
- gap:12px 18px;
- flex-wrap:wrap;
- }
-
-.ctaRow{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-
- </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submission · Ara Korea Film Festival</title>
+  <meta name="description" content="Submit your film to Ara Korea Film Festival through the official AKFF page on FilmFreeway.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="Submission · Ara Korea Film Festival">
+  <meta property="og:description" content="Your film. Our screen.">
+  <meta property="og:image" content="https://i.ytimg.com/vi/4b6K4aricJc/maxresdefault.jpg">
+  <link rel="canonical" href="https://www.arakoreafilmfestival.com/submit.html">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./site.js" defer></script>
 </head>
-<body>
- <div class="wrap">
-  <header>
-<div class="topbar">
-<div class="brand"><a href="./index.html">AKFF</a></div>
-<nav aria-label="Primary">
-<a href="./index.html">Home</a>
-<a href="./about.html">About</a>
-<a href="./awards.html">Awards</a>
-<a href="./submit.html" aria-current="page">Submission</a>
-<a href="./contact.html">Contact</a>
+<body data-page="submit">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header id="siteHeader"></header>
 
+  <main id="main" class="page-shell">
+    <section class="page-hero">
+      <div class="content-frame page-hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="submit.kicker">03 · Submission</p>
+          <h1 class="display-title" data-i18n-html="submit.title">Your film.<br><em>Our screen.</em></h1>
+        </div>
+        <div class="page-hero-copy">
+          <p class="body-large" data-i18n="submit.lead">AKFF welcomes films from every country, genre, and format. All submissions are accepted exclusively through FilmFreeway.</p>
+          <div class="button-row" style="margin-top:30px">
+            <a class="button primary" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener"><span data-i18n="common.submit">Submit on FilmFreeway</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</nav>
-</div>
-</header>
-  
-<main>
- <section class="hero">
-  <div class="kicker">Ara Korea Film Festival</div>
-  <h1>Submission</h1>
-  <p class="lead">
-   Ara Korea Film Festival (AKFF) accepts film submissions exclusively through FilmFreeway.
-  </p>
-  <div class="ctaRow">
-   <a class="btn primary" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">Submit via FilmFreeway</a>
-  </div>
- </section>
+    <section class="content-section">
+      <div class="content-frame">
+        <div class="split-intro reveal" style="margin-bottom:80px">
+          <div>
+            <p class="eyebrow" data-i18n="submit.processKicker">How it works</p>
+            <h2 class="section-title" data-i18n-html="submit.processTitle">From submission<br>to screening.</h2>
+          </div>
+        </div>
 
- <section class="section">
-  <h2>General information</h2>
-  <ul>
-   <li>AKFF is an offline, in-person film festival held in Korea.</li>
-   <li>All films are reviewed by the festival programming team.</li>
-   <li>Selected films will be screened at the official festival venue.</li>
-  </ul>
- </section>
+        <div class="process-grid reveal">
+          <article class="process-card">
+            <span class="step">01</span>
+            <div><h3 data-i18n="submit.s1">Prepare</h3><p data-i18n="submit.s1d">Complete your film information in English and prepare all required viewing materials.</p></div>
+          </article>
+          <article class="process-card">
+            <span class="step">02</span>
+            <div><h3 data-i18n="submit.s2">Submit</h3><p data-i18n="submit.s2d">Send your entry through the official AKFF page on FilmFreeway.</p></div>
+          </article>
+          <article class="process-card">
+            <span class="step">03</span>
+            <div><h3 data-i18n="submit.s3">Selection</h3><p data-i18n="submit.s3d">The programming team reviews every work and contacts selected filmmakers directly.</p></div>
+          </article>
+          <article class="process-card">
+            <span class="step">04</span>
+            <div><h3 data-i18n="submit.s4">Screening</h3><p data-i18n="submit.s4d">Official selections are presented at the confirmed festival venue in Korea.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
- <section class="section">
-  <h2>Eligibility</h2>
-  <ul>
-   <li>Open to filmmakers worldwide (ages 10+).</li>
-   <li>All genres and formats are welcome.</li>
-   <li>Submission information must be provided in English (official language).</li>
-  </ul>
- </section>
+    <section class="content-section">
+      <div class="content-frame reveal">
+        <div class="notice-panel">
+          <div>
+            <p class="eyebrow" data-i18n="submit.infoKicker">Essential information</p>
+            <h2 class="section-title small" data-i18n="submit.infoTitle">Before you submit</h2>
+          </div>
+          <div>
+            <ul>
+              <li data-i18n="submit.i1">Open to filmmakers worldwide, aged 10 and above.</li>
+              <li data-i18n="submit.i2">All genres, lengths, and formats are eligible.</li>
+              <li data-i18n="submit.i3">Submission information must be provided in English.</li>
+              <li data-i18n="submit.i4">Non-Korean films require Korean subtitles for screening.</li>
+              <li data-i18n="submit.i5">Official selections are announced through FilmFreeway.</li>
+              <li data-i18n="submit.i6">Screening details follow after the venue is confirmed.</li>
+            </ul>
+            <div class="button-row" style="margin-top:30px">
+              <a class="button" href="./AKFF_Rules_and_Terms.docx"><span data-i18n="submit.rules">Download Rules & Terms</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
- <section class="section">
-  <h2>Selection &amp; screening</h2>
-  <ul>
-   <li>Official selections will be announced on FilmFreeway.</li>
-   <li>Selected filmmakers will be contacted directly by the festival.</li>
-   <li>Non-Korean films must include Korean subtitles for screening.</li>
-   <li>Screening details will be provided after venue confirmation.</li>
-  </ul>
- </section>
+    <section class="cta-banner">
+      <div class="content-frame cta-banner-inner reveal">
+        <div>
+          <p class="eyebrow" data-i18n="submit.ctaKicker">Official submissions</p>
+          <h2 class="section-title" data-i18n-html="submit.ctaTitle">Ready when<br>your film is.</h2>
+        </div>
+        <a class="button" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener"><span data-i18n="common.submit">Submit on FilmFreeway</span></a>
+      </div>
+    </section>
+  </main>
 
- <footer>
-  <div>© <span id="y"></span> Ara Korea Film Festival</div>
-  <div><a href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener">FilmFreeway</a></div>
- </footer>
-</main>
-
- </div>
-
- <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
- </script>
+  <footer id="siteFooter"></footer>
 </body>
 </html>
