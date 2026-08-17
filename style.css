@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap");
+
 :root {
   --black: #050505;
   --black-soft: #0b0b0c;
@@ -13,6 +15,7 @@
   --pad: clamp(20px, 4vw, 68px);
   --serif: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
   --sans: "Helvetica Neue", "Inter", "Noto Sans", Arial, sans-serif;
+  --display: "Helvetica Neue", "Arial Narrow", "Inter", Arial, sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -34,6 +37,18 @@ body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+html[lang="ko"] body {
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+html[lang="ja"] body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+html[lang="zh-CN"] body {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 body.menu-open,
@@ -319,25 +334,34 @@ body:not(.home) .site-header {
 
 .display-title {
   margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(64px, 12vw, 184px);
-  font-weight: 400;
-  line-height: 0.78;
-  letter-spacing: -0.065em;
+  font-family: var(--display);
+  font-size: clamp(58px, 9.3vw, 148px);
+  font-weight: 800;
+  line-height: 0.86;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
 }
 
 .display-title em {
   color: var(--red);
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
 }
 
 .section-title {
   margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(44px, 7vw, 104px);
-  font-weight: 400;
-  line-height: 0.94;
-  letter-spacing: -0.045em;
+  font-family: var(--display);
+  font-size: clamp(42px, 6vw, 88px);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  text-wrap: balance;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
 }
 
 .section-title.small {
@@ -350,6 +374,7 @@ body:not(.home) .site-header {
   font-size: clamp(17px, 1.55vw, 23px);
   line-height: 1.65;
   font-weight: 300;
+  text-wrap: pretty;
 }
 
 .body-copy {
@@ -357,6 +382,7 @@ body:not(.home) .site-header {
   color: var(--paper-soft);
   font-size: 15px;
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
 .meta-text {
@@ -653,11 +679,12 @@ body:not(.home) .site-header {
 
 .feature-name {
   margin: 20px 0 12px;
-  font-family: var(--serif);
-  font-size: clamp(58px, 7.5vw, 118px);
+  font-family: var(--display);
+  font-size: clamp(54px, 7vw, 104px);
   line-height: 0.82;
-  font-weight: 400;
-  letter-spacing: -0.06em;
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
 }
 
 .feature-copy .button {
@@ -717,10 +744,12 @@ body:not(.home) .site-header {
 
 .award-mini h3 {
   margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(31px, 3vw, 48px);
-  font-weight: 400;
-  line-height: 1;
+  font-family: var(--display);
+  font-size: clamp(28px, 2.7vw, 44px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
 }
 
 .award-mini .number {
@@ -851,11 +880,12 @@ body:not(.home) .site-header {
 
 .award-name {
   margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(38px, 5vw, 74px);
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  font-family: var(--display);
+  font-size: clamp(36px, 4.5vw, 68px);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
 }
 
 .award-description {
@@ -886,10 +916,11 @@ body:not(.home) .site-header {
 
 .process-card h3 {
   margin: 0 0 14px;
-  font-family: var(--serif);
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1;
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
 }
 
 .process-card p {
@@ -929,6 +960,65 @@ body:not(.home) .site-header {
 }
 
 .notice-panel li:first-child { padding-top: 0; }
+
+.faq-intro {
+  margin-bottom: clamp(54px, 7vw, 96px);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  min-height: 260px;
+  padding: clamp(26px, 3vw, 42px);
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item:nth-child(even) {
+  border-left: 1px solid var(--line);
+}
+
+.faq-item h3 {
+  max-width: 560px;
+  margin: 0 0 28px;
+  font-family: var(--display);
+  font-size: clamp(24px, 2.4vw, 38px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.faq-item p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--paper-soft);
+  font-size: 15px;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+html[lang="ko"] .faq-item h3,
+html[lang="ko"] .faq-item p {
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+html[lang="ja"] .faq-item h3,
+html[lang="ja"] .faq-item p {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  line-break: strict;
+}
+
+html[lang="zh-CN"] .faq-item h3,
+html[lang="zh-CN"] .faq-item p {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-break: strict;
+}
 
 .contact-grid {
   display: grid;
@@ -1193,6 +1283,124 @@ body:not(.home) .site-header {
   transform: translateY(0);
 }
 
+/* LANGUAGE-SPECIFIC TYPOGRAPHY */
+html[lang="ko"] :where(.display-title, .section-title, .feature-name, .award-name, .award-mini h3, .process-card h3) {
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
+  hyphens: none;
+}
+
+html[lang="ko"] .ko-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+html[lang="ja"] :where(.display-title, .section-title, .feature-name, .award-name, .award-mini h3, .process-card h3) {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  word-break: normal;
+  overflow-wrap: normal;
+  line-break: strict;
+  hyphens: none;
+}
+
+html[lang="zh-CN"] :where(.display-title, .section-title, .feature-name, .award-name, .award-mini h3, .process-card h3) {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  word-break: normal;
+  overflow-wrap: normal;
+  line-break: strict;
+  hyphens: none;
+}
+
+html[lang="ko"] .display-title {
+  max-width: 11em;
+  font-size: clamp(46px, 5.7vw, 86px);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+html[lang="ja"] .display-title {
+  font-size: clamp(46px, 6vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+html[lang="zh-CN"] .display-title {
+  font-size: clamp(48px, 6.4vw, 98px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+html[lang="ko"] .section-title,
+html[lang="ko"] .section-title.small {
+  font-size: clamp(36px, 4.15vw, 62px);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+html[lang="ja"] .section-title,
+html[lang="ja"] .section-title.small {
+  font-size: clamp(35px, 4.35vw, 66px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+html[lang="zh-CN"] .section-title,
+html[lang="zh-CN"] .section-title.small {
+  font-size: clamp(36px, 4.55vw, 69px);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+html[lang="ko"] :where(h1, h2, h3, p, li, .fact-label, .fact-value, .stat-value, .meta-text) {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
+  hyphens: none;
+}
+
+html[lang="ja"] :where(h1, h2, h3, p, li),
+html[lang="zh-CN"] :where(h1, h2, h3, p, li) {
+  line-break: strict;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+html[lang="ko"] :where(.body-large, .body-copy, .award-description, .process-card p, .notice-panel li),
+html[lang="ja"] :where(.body-large, .body-copy, .award-description, .process-card p, .notice-panel li),
+html[lang="zh-CN"] :where(.body-large, .body-copy, .award-description, .process-card p, .notice-panel li) {
+  text-wrap: pretty;
+}
+
+html[lang="ko"] body {
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+html[lang="ko"] :where(.body-large, .body-copy, .award-description, .process-card p, .notice-panel li, .faq-item p) {
+  font-weight: 400;
+  line-height: 1.82;
+}
+
+html[lang="ko"] .page-hero-copy {
+  max-width: 560px;
+}
+
+html[lang="ko"] :where(.award-name, .award-mini h3, .process-card h3, .faq-item h3) {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.16;
+}
+
 @media (max-width: 1100px) {
   .desktop-nav { gap: 18px; }
   .desktop-nav a { font-size: 9px; }
@@ -1224,6 +1432,7 @@ body:not(.home) .site-header {
   .contact-grid,
   .cta-banner-inner { grid-template-columns: 1fr; }
   .page-hero { min-height: 62vh; }
+  .page-hero-grid { gap: 44px; }
   .page-hero-copy { max-width: 620px; }
   .stat-grid { grid-template-columns: 1fr; }
   .stat { min-height: 170px; }
@@ -1237,12 +1446,67 @@ body:not(.home) .site-header {
 @media (max-width: 620px) {
   :root { --pad: 20px; }
   .brand-name { display: none; }
+  .site-header,
+  .site-header.is-scrolled,
+  body:not(.home) .site-header { height: 64px; }
+  .brand-mark { width: 32px; height: 32px; }
+  .mobile-panel { padding-top: 92px; }
+  .mobile-nav a { padding: 13px 0; font-size: clamp(34px, 12vw, 50px); }
   .hero-video { opacity: 0.55; }
   .hero-grid { display: none; }
   .hero-title { font-size: clamp(92px, 29vw, 156px); }
   .hero-side p { font-size: 14px; }
   .hero-bottom { flex-direction: column; align-items: stretch; }
   .hero-bottom .button { width: 100%; }
+  .hero-content { padding-top: 110px; padding-bottom: 34px; }
+  .hero-title-row { gap: 22px; }
+  .hero-bottom { margin-top: 28px; }
+  .page-hero {
+    min-height: auto;
+    padding: 122px 0 72px;
+    align-items: flex-start;
+  }
+  .page-hero-grid { gap: 34px; }
+  .display-title {
+    font-size: clamp(48px, 15vw, 70px);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+  }
+  html[lang="ko"] .display-title {
+    max-width: 100%;
+    font-size: clamp(40px, 11.3vw, 50px);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+  }
+  html[lang="ja"] .display-title {
+    font-size: clamp(41px, 11.8vw, 55px);
+    line-height: 1.04;
+  }
+  html[lang="zh-CN"] .display-title {
+    font-size: clamp(44px, 12.5vw, 59px);
+    line-height: 1.02;
+  }
+  .section-title,
+  .section-title.small {
+    font-size: clamp(38px, 11.5vw, 54px);
+    line-height: 0.98;
+  }
+  html[lang="ko"] .section-title,
+  html[lang="ko"] .section-title.small,
+  html[lang="ja"] .section-title,
+  html[lang="ja"] .section-title.small,
+  html[lang="zh-CN"] .section-title,
+  html[lang="zh-CN"] .section-title.small {
+    font-size: clamp(33px, 9vw, 42px);
+    line-height: 1.14;
+  }
+  .body-large { font-size: 17px; line-height: 1.7; }
+  .content-section,
+  .index-section { padding: 76px 0; }
+  .split-intro { gap: 34px; }
+  .editorial-grid + .editorial-grid { margin-top: 70px; padding-top: 70px; }
+  .button-row { display: grid; grid-template-columns: 1fr; width: 100%; }
+  .button-row .button { width: 100%; }
   .feature-visual { min-height: 54vh; }
   .feature-copy { min-height: 340px; }
   .award-strip { grid-template-columns: 1fr; }
@@ -1250,6 +1514,7 @@ body:not(.home) .site-header {
   .award-mini + .award-mini { border-left: 0; }
   .fact-list li { grid-template-columns: 28px 1fr; gap: 14px; }
   .fact-list .fact-value { grid-column: 2; }
+  .fact-list li { align-items: start; }
   .award-row { grid-template-columns: 34px 1fr; gap: 14px; }
   .process-grid { grid-template-columns: 1fr; }
   .process-card { min-height: 260px; }
@@ -1261,11 +1526,31 @@ body:not(.home) .site-header {
   .form-actions .button { width: 100%; }
   .footer-links { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .faq-item { min-height: 0; padding: 30px 0; }
+  .faq-item:nth-child(even) { border-left: 0; }
+  .faq-item h3 { font-size: 27px; margin-bottom: 18px; }
+  .cta-banner { min-height: auto; padding: 84px 0; }
+  .cta-banner-inner { gap: 42px; }
+  .cta-banner .button { width: 100%; }
+  .cta-banner::after { right: -0.02em; bottom: -0.1em; font-size: 52vw; }
   .screening-modal { padding: 0; }
   .screening-stage { width: 100%; }
   .screening-close { top: -44px; right: 16px; }
   .screening-controls { padding: 16px; }
   .screening-title { display: none; }
+}
+
+@media (max-width: 380px) {
+  :root { --pad: 17px; }
+  .display-title { font-size: 46px; }
+  html[lang="ko"] .display-title { font-size: 38px; }
+  html[lang="ja"] .display-title { font-size: 39px; }
+  html[lang="zh-CN"] .display-title { font-size: 42px; }
+  .eyebrow { gap: 10px; letter-spacing: 0.14em; }
+  .eyebrow::before { width: 20px; }
+  .button { padding-left: 18px; padding-right: 18px; gap: 14px; }
+  .screening-controls { gap: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
