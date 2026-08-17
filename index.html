@@ -1,277 +1,166 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Ara Korea Film Festival (AKFF)</title>
-<meta content="Ara Korea Film Festival (AKFF) — an international film festival recognizing overall excellence across all genres." name="description"/>
-<style>
- :root{
- --bg:#ffffff;
- --text:#111111;
- --muted:#6a6a6a;
- --line:#e6e6e6;
- --max:1000px;
- }
- *{ box-sizing:border-box; }
- body{
- margin:0;
- background:var(--bg);
- color:var(--text);
- font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
- Roboto, Helvetica, Arial;
- line-height:1.7;
- letter-spacing:0.15px;
- font-size:15px;
- }
- a{ color:inherit; text-decoration:none; }
- a:hover{ text-decoration:none; }
-
- .wrap{ max-width:var(--max); margin:0 auto; padding:20px 20px 64px; }
-
- header{
- position:relative;
- background: #ffffff;
- border-bottom:1px solid var(--line);
- z-index: 10;
- }
-
- .topbar{
- display:flex;
- justify-content:space-between;
- align-items:center;
- padding:14px 0;
- font-size:12px;
- text-transform:uppercase;
- letter-spacing:0.7px;
- gap:16px;
- }
- .brand a{ font-weight:700; }
- nav{
- white-space:nowrap;
-
- display:flex;
- gap:14px;
- color:var(--muted);
- font-size:11.5px;
- letter-spacing:0.7px;
- flex-wrap:wrap;
- justify-content:flex-end;
- }
- nav a{ white-space:nowrap; }
- 
-
- /* Small screens: keep nav on one line via horizontal scroll (no wrapping) */
- @media (max-width: 420px){.topbar{ align-items:flex-start; gap:10px; }
- nav{
- flex-wrap: nowrap;
- overflow-x: auto;
- -webkit-overflow-scrolling: touch;
- max-width: 100%;
- padding-bottom: 4px;
- justify-content:flex-start;
- gap:12px;
- font-size:11px;
- }
- nav::-webkit-scrollbar{ display:none; }
- }
-nav a[aria-current="page"]{
- color:var(--text);
- text-decoration:none;
- border-bottom:1px solid var(--text);
- padding-bottom:2px;
- }
-
-
- /* HERO */
- .hero{
- margin-top:18px;
- border:1px solid var(--line);
- border-radius:18px;
- overflow:hidden;
- background:#0b1220;
- position:relative;
- }
- .heroMedia{
- aspect-ratio: 16 / 9;
- width:100%;
- position:relative;
- background:#0b1220;
- }
- .heroMedia > img{
- position:absolute;
- inset:0;
- width:100%;
- height:100%;
- object-fit:cover;
- display:block;
- }
- .heroMedia:after{
- content:"";
- position:absolute;
- inset:0;
- background:
- linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.25));
- pointer-events:none;
- }
- .heroInner{
- position:absolute;
- inset:auto 0 0 0;
- padding:22px 20px 18px;
- color:#fff;
- z-index:2;
- }
- .kicker{
- font-size:11px;
- text-transform:uppercase;
- letter-spacing:1px;
- opacity:.9;
- margin:0 0 6px;
- }
- h1{
- margin:0 0 10px;
- font-size:clamp(28px,4vw,46px);
- line-height:1.08;
- font-weight:800;
- }
- .lead{
- margin:0 0 18px;
- max-width:760px;
- color:rgba(255,255,255,0.88);
- font-size:14.5px;
- }
-
- .ctaRow{
- display:flex;
- gap:14px;
- flex-wrap:wrap;
- align-items:center;
- }
-.ctaRow .btn{ min-width:160px; }
-
-
- .btn{
- display:inline-flex;
- align-items:center;
- justify-content:center;
- min-height:44px;
- padding:0 16px;
- border:1px solid rgba(255,255,255,0.9);
- border-radius:10px;
- font-weight:700;
- font-size:13px;
- color:#fff;
- backdrop-filter: blur(6px);
- background: rgba(255,255,255,0.08);
- }
-
- .btn.primary{
- background:#fff;
- color:#111;
- border-color:#fff;
- }
-
- .btn.logo{
- background:#fff;
- color:#111;
- border-color:#fff;
- padding:0 16px;
- }
-
-
- .btn.logo img{
- height:40px;
- width:auto;
- display:block;
- image-rendering: -webkit-optimize-contrast;
-}
-
-
- footer{
- margin-top:72px;
- padding-top:22px;
- border-top:1px solid var(--line);
- color:var(--muted);
- font-size:12px;
- display:flex;
- justify-content:space-between;
- gap:12px 18px;
- flex-wrap:wrap;
- }
- 
-/* ORGANIZER LINK */
-.orgCard{
- display:inline-flex;
- align-items:center;
- gap:10px;
- padding:8px 12px;
- border:1px solid var(--line);
- border-radius:12px;
- background:#fff;
- color:var(--text);
- font-weight:600;
- line-height:1;
-}
-.orgCard span{
- font-weight:600;
- color:var(--muted);
- font-size:12px;
-}
-.orgCard img{
- height:18px;
- width:auto;
- display:block;
-}
-.orgCard:hover{
- border-color: rgba(17,17,17,0.35);
-}
-
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ara Korea Film Festival · AKFF</title>
+  <meta name="description" content="Ara Korea Film Festival — a screen for singular visions, new cinematic languages, and emerging filmmakers worldwide.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ara Korea Film Festival · AKFF">
+  <meta property="og:description" content="Cinema · Performance · New Media">
+  <meta property="og:image" content="https://i.ytimg.com/vi/4b6K4aricJc/maxresdefault.jpg">
+  <meta property="og:url" content="https://www.arakoreafilmfestival.com/">
+  <link rel="canonical" href="https://www.arakoreafilmfestival.com/">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./site.js" defer></script>
 </head>
-<body>
-<div class="wrap">
-<header>
-<div class="topbar">
-<div class="brand"><a href="./index.html">AKFF</a></div>
-<nav aria-label="Primary">
-<a aria-current="page" href="./index.html">Home</a>
-<a href="./about.html">About</a>
-<a href="./awards.html">Awards</a>
-<a href="./submit.html">Submission</a>
-<a href="./contact.html">Contact</a>
+<body class="home" data-page="home">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header id="siteHeader"></header>
 
+  <main id="main" class="page-shell">
+    <section class="home-hero" aria-labelledby="heroTitle">
+      <div class="hero-video" aria-hidden="true">
+        <div class="hero-video-poster"></div>
+        <iframe
+          src="https://www.youtube.com/embed/4b6K4aricJc?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=4b6K4aricJc&amp;playsinline=1&amp;rel=0&amp;iv_load_policy=3"
+          title="DAL. HAE EYE background film"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          tabindex="-1"></iframe>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-grid"></div>
 
-</nav>
-</div>
-</header>
-<main>
-<section aria-label="Hero" class="hero">
-<div class="heroMedia">
-<img alt="AKFF key visual" src="./hero-akff.png"/>
-<div class="heroInner">
-<p class="kicker">Ara Korea Film Festival</p>
-<h1>AKFF</h1>
-<p class="lead">
- Recognizing overall excellence across all genres and formats.
- </p>
-<div class="ctaRow">
-<a class="btn primary" href="./submit.html">Call for Entries</a>
-<a aria-label="Submit via FilmFreeway" class="btn logo" href="https://filmfreeway.com/arakorea" rel="noopener" target="_blank">
-<img alt="FilmFreeway" src="./filmfreeway-logo-hi.png"/>
-</a>
-</div>
-</div>
-</div>
-</section>
-<footer>
-<div>© <span id="y"></span> Ara Korea Film Festival</div>
-<div><a class="orgCard" href="https://arakorea.org" target="_blank" rel="noopener" aria-label="Organized and operated by ARA KOREA (opens in a new tab)"><span>Organized by</span><img src="./ara korea.png" alt="ARA KOREA"></a></div>
-</footer>
-</main>
-</div>
-<script>
- document.getElementById('y').textContent = new Date().getFullYear();
- </script>
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <p class="eyebrow" data-i18n="home.kicker">Korea · International Film Festival</p>
+          <div class="hero-title-row">
+            <h1 id="heroTitle" class="hero-title">AKFF</h1>
+            <div class="hero-side">
+              <p data-i18n="home.heroCopy">A screen for singular visions, new cinematic languages, and the artists shaping what comes next.</p>
+              <div class="button-row">
+                <button class="button primary play" type="button" data-open-screening><span data-i18n="common.watch">Watch film</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="hero-bottom">
+            <div class="hero-caption meta-text">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span data-i18n="home.now">Now presenting</span>
+              <span data-i18n="home.heroMeta">DAL. HAE EYE · Experimental Art Film</span>
+            </div>
+            <a class="button" href="./about.html"><span data-i18n="common.discover">Discover AKFF</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="index-section light">
+      <div class="content-frame split-intro reveal">
+        <div>
+          <p class="eyebrow" data-i18n="home.introKicker">The festival as a living screen</p>
+          <h2 class="section-title" data-i18n="home.introTitle">Cinema begins where explanation ends.</h2>
+        </div>
+        <p class="body-large" data-i18n="home.introCopy">AKFF brings independent films, embodied performance, sound, and new media into one focused encounter. We champion works that do not simply follow form, but create their own language.</p>
+      </div>
+    </section>
+
+    <section class="index-section" id="screening">
+      <div class="content-frame">
+        <article class="feature-film reveal">
+          <div class="feature-visual">
+            <button class="play-disc" type="button" data-open-screening aria-label="Watch film">▶</button>
+          </div>
+          <div class="feature-copy">
+            <div>
+              <p class="eyebrow" data-i18n="home.featureKicker">Featured presentation · 001</p>
+              <h2 class="feature-name" data-i18n-html="home.featureTitle">DAL.<br>HAE EYE</h2>
+              <p class="meta-text" data-i18n="home.featureType">Experimental Art Film · ARA KOREA</p>
+            </div>
+            <div>
+              <p class="body-copy" data-i18n="home.featureCopy">An experimental moving-image work exploring the threshold between body, sound, space, and perception.</p>
+              <div class="button-row" style="margin-top:28px">
+                <button class="button primary play" type="button" data-open-screening><span data-i18n="common.watch">Watch film</span></button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="index-section light">
+      <div class="content-frame">
+        <div class="split-intro reveal">
+          <div>
+            <p class="eyebrow" data-i18n="home.manifestoKicker">AKFF in focus</p>
+            <h2 class="section-title" data-i18n-html="home.manifestoTitle">Distinct voices.<br>One shared screen.</h2>
+          </div>
+          <p class="body-large" data-i18n="home.manifestoCopy">We welcome filmmakers worldwide and evaluate every work across genre, length, and format with a commitment to artistic integrity, clarity, and fairness.</p>
+        </div>
+        <div class="stat-grid reveal">
+          <div class="stat">
+            <span class="stat-value" data-i18n="home.stat1Value">Global</span>
+            <span class="meta-text" data-i18n="home.stat1Label">Worldwide submissions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-i18n="home.stat2Value">Live</span>
+            <span class="meta-text" data-i18n="home.stat2Label">In-person cinema experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" data-i18n="home.stat3Value">04</span>
+            <span class="meta-text" data-i18n="home.stat3Label">Awards for overall excellence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="index-section">
+      <div class="content-frame">
+        <div class="split-intro reveal" style="margin-bottom:80px">
+          <div>
+            <p class="eyebrow" data-i18n="home.awardsKicker">The AKFF Awards</p>
+            <h2 class="section-title" data-i18n-html="home.awardsTitle">Four distinctions.<br>No genre walls.</h2>
+          </div>
+          <div class="button-row" style="align-self:end">
+            <a class="button" href="./awards.html"><span data-i18n="nav.awards">Awards</span></a>
+          </div>
+        </div>
+        <div class="award-strip reveal">
+          <a class="award-mini" href="./awards.html#best-film"><span class="number">01</span><h3 data-i18n="home.award1">Best Film</h3></a>
+          <a class="award-mini" href="./awards.html#best-director"><span class="number">02</span><h3 data-i18n="home.award2">Best Director</h3></a>
+          <a class="award-mini" href="./awards.html#best-performance"><span class="number">03</span><h3 data-i18n="home.award3">Best Performance</h3></a>
+          <a class="award-mini" href="./awards.html#jury-prize"><span class="number">04</span><h3 data-i18n="home.award4">Jury Special Prize</h3></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="content-frame cta-banner-inner reveal">
+        <div>
+          <p class="eyebrow" data-i18n="home.ctaKicker">Call for entries</p>
+          <h2 class="section-title" data-i18n-html="home.ctaTitle">Bring your film<br>into the light.</h2>
+        </div>
+        <a class="button" href="https://filmfreeway.com/arakorea" target="_blank" rel="noopener"><span data-i18n="common.submit">Submit on FilmFreeway</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="siteFooter"></footer>
+
+  <div class="screening-modal" id="screeningModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="AKFF screening">
+    <div class="screening-stage">
+      <button class="screening-close" type="button" data-player-close><span data-i18n="common.close">Close</span> ×</button>
+      <div class="screening-player" id="akffPlayer"></div>
+      <div class="screening-controls">
+        <div class="control-group">
+          <button type="button" data-player-play aria-label="Play">▶</button>
+          <button type="button" data-player-mute aria-label="Mute">♪</button>
+          <span class="screening-title" data-i18n="player.title">DAL. HAE EYE · AKFF Featured Presentation</span>
+        </div>
+        <button type="button" data-player-fullscreen aria-label="Fullscreen">⛶</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
